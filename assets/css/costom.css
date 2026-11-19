@@ -1,0 +1,346 @@
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #d6d6d6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', serif;
+    color: #87CEFA;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #87CEFA;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 36px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 28px;
+    color: #87CEFA;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 23px;
+    color: #eeeeee;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 19px;
+    color: #cccccc;
+    font-weight: 500;
+}
+
+h6 {
+    font-size: 16px;
+    color: #87CEFA;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.9;
+    color: #c5c5c5;
+    margin-bottom: 20px;
+}
+
+:root {
+    --accent-color: #87CEFA;
+    --nav-hover-color: #87CEFA;
+    --nav-dropdown-hover-color: #87CEFA;
+}
+
+button,
+.btn,
+input[type="submit"] {
+    background-color: #87CEFA;
+    color: #000000;
+    border: 2px solid #87CEFA;
+    border-radius: 30px;
+    padding: 12px 28px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover,
+.btn:hover,
+input[type="submit"]:hover {
+    background-color: transparent;
+    color: #87CEFA;
+    border-color: #87CEFA;
+    transform: translateY(-3px);
+}
+
+button:active,
+.btn:active,
+input[type="submit"]:active {
+    background-color: #5DADE2;
+    transform: scale(0.95);
+}
+
+a {
+    color: #87CEFA;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #B0E2FF;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #5DADE2;
+}
+
+
+/* =================================
+   SECTIONS - SPACING AND LAYOUT
+================================= */
+
+/* Bendri sekcijų tarpai */
+section {
+    padding: 80px 0;
+}
+
+/* APIE */
+.about {
+    padding: 90px 0;
+}
+
+.about .content {
+    background-color: #1a1a1a;
+    padding: 30px;
+    margin-top: 20px;
+    border: 1px solid #75c9f0;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(117, 201, 240, 0.15);
+}
+
+/* PATIRTIS */
+.resume {
+    padding: 90px 0;
+}
+
+.resume .resume-item {
+    background-color: #1a1a1a;
+    padding: 25px 25px 25px 30px;
+    margin: 20px 0;
+    border-left: 4px solid #75c9f0;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(117, 201, 240, 0.12);
+}
+
+.resume .resume-title {
+    margin-bottom: 30px;
+    color: #75c9f0;
+}
+
+.portfolio {
+    padding: 90px 0;
+}
+
+.portfolio .portfolio-content {
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    border: 2px solid #75c9f0;
+    box-shadow: 0 5px 20px rgba(117, 201, 240, 0.15);
+}
+
+.portfolio .portfolio-content img {
+    border-radius: 12px;
+}
+
+.about .row,
+.resume .row,
+.portfolio .row {
+    row-gap: 25px;
+}
+
+.header {
+    background-color: #111827;
+    padding: 20px 0;
+    border-bottom: 2px solid #75c9f0;
+    box-shadow: 0 4px 15px rgba(117, 201, 240, 0.2);
+}
+
+.navmenu a {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.navmenu a:hover,
+.navmenu .active {
+    color: #75c9f0;
+    background-color: #263849;
+    border-radius: 8px;
+}
+
+.skills .progress {
+    height: 75px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+}
+
+.skills .progress-bar-wrap {
+    height: 14px;
+    background-color: #343434;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #75c9f0;
+}
+
+.skills .progress-bar {
+    height: 14px;
+    background: linear-gradient(90deg, #368fbd, #75c9f0);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(117, 201, 240, 0.5);
+}
+
+.skills .progress .skill {
+    color: #75c9f0;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.services ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.services ul > li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+}
+
+/* Pagrindinio sąrašo ženkliukas */
+.services ul > li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #18a058;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.services ol {
+    list-style: none;
+    counter-reset: mano-numeris;
+    padding-left: 0;
+}
+
+.services ol > li {
+    counter-increment: mano-numeris;
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 15px;
+}
+
+/* Numeriai su apskritimu */
+.services ol > li::before {
+    content: counter(mano-numeris);
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 28px;
+    height: 28px;
+    background-color: #18a058;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-weight: bold;
+}
+
+.services ul ul {
+    margin-top: 10px;
+    margin-left: 15px;
+    padding-left: 15px;
+    border-left: 3px solid #18a058;
+}
+
+.services ul ul > li {
+    padding-left: 25px;
+    margin-bottom: 8px;
+    color: #aaa;
+}
+
+/* Įdėtinio sąrašo ženkliukas */
+.services ul ul > li::before {
+    content: "◆";
+    color: #e0a800;
+    font-size: 12px;
+    left: 0;
+    top: 3px;
+}
+
+.services table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Vienodi langelių vidiniai tarpai */
+.services table th,
+.services table td {
+    padding: 15px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #444;
+}
+
+.services table thead th {
+    background-color: #0d00ff;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+/* Lyginės eilutės */
+.services table tbody tr:nth-child(even) {
+    background-color: #e8f5ee;
+    color: #222;
+}
+
+/* Nelyginės eilutės */
+.services table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+    color: #222;
+}
+
+.services table tbody tr:hover {
+    background-color: #c5e8d4;
+    transition: background-color 0.3s ease;
+}
