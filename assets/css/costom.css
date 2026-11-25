@@ -113,12 +113,6 @@ a:active {
     color: #5DADE2;
 }
 
-
-/* =================================
-   SECTIONS - SPACING AND LAYOUT
-================================= */
-
-/* Bendri sekcijų tarpai */
 section {
     padding: 80px 0;
 }
@@ -343,4 +337,624 @@ section {
 .services table tbody tr:hover {
     background-color: #c5e8d4;
     transition: background-color 0.3s ease;
+}
+
+/* ==============================
+   SKILL KANBAN BOARD
+============================== */
+
+.skills-kanban {
+    padding: 100px 0 60px;
+    background-color: #111827;
+    min-height: 80vh;
+}
+
+.skills-kanban .section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.skills-kanban .section-title h2 {
+    color: #87CEFA;
+}
+
+/* XP summary */
+
+.xp-summary {
+    background-color: #1a1a1a;
+    border: 1px solid #75c9f0;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 35px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(117, 201, 240, 0.15);
+}
+
+.xp-summary h3 {
+    font-size: 22px;
+    color: #87CEFA;
+    margin-bottom: 5px;
+}
+
+.total-xp {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: #87CEFA;
+}
+
+.xp-summary p {
+    color: #c5c5c5;
+    margin: 5px 0 0;
+}
+
+/* Kanban board */
+
+.kanban-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: start;
+}
+
+/* Columns */
+
+.kanban-column {
+    padding: 20px;
+    border-radius: 15px;
+    min-height: 400px;
+    background-color: #1a1a1a;
+    border: 1px solid #343434;
+}
+
+.planned {
+    border-top: 5px solid #e0a800;
+}
+
+.learning {
+    border-top: 5px solid #149ddd;
+}
+
+.completed {
+    border-top: 5px solid #18a058;
+}
+
+/* Column headers */
+
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.column-header h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    color: #87CEFA;
+}
+
+.task-count {
+    background-color: #263849;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #87CEFA;
+}
+
+/* Skill cards */
+
+.skill-card {
+    background-color: #263849;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border: 1px solid #75c9f0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 18px rgba(117, 201, 240, 0.2);
+}
+
+.skill-card h4 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #87CEFA;
+    margin-bottom: 8px;
+}
+
+.skill-card p {
+    font-size: 13px;
+    color: #c5c5c5;
+    margin-bottom: 15px;
+}
+
+/* Status labels */
+
+.skill-status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.planned .skill-status {
+    background-color: #55451c;
+    color: #ffd76a;
+}
+
+.learning .skill-status {
+    background-color: #17435b;
+    color: #75c9f0;
+}
+
+.completed .skill-status {
+    background-color: #17452e;
+    color: #75e0a0;
+}
+
+/* XP points */
+
+.xp-points {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+    color: #87CEFA;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: right;
+}
+
+/* Responsive design */
+
+@media (max-width: 992px) {
+    .kanban-board {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .kanban-board {
+        grid-template-columns: 1fr;
+    }
+
+    .kanban-column {
+        min-height: auto;
+    }
+
+    .skills-kanban {
+        padding: 80px 0 40px;
+    }
+}
+
+/*PLAYER STATISTICS*/
+
+.player-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.player-stat-card {
+    background-color: #1a1a1a;
+    border: 1px solid #75c9f0;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(117, 201, 240, 0.12);
+    transition: all 0.3s ease;
+}
+
+.player-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(117, 201, 240, 0.25);
+}
+
+.stat-icon {
+    font-size: 35px;
+    color: #87CEFA;
+    margin-bottom: 15px;
+}
+
+.player-stat-card h3 {
+    font-size: 19px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.stat-value {
+    font-size: 27px;
+    font-weight: 800;
+    color: #87CEFA;
+    margin-bottom: 10px;
+}
+
+.player-stat-card p {
+    font-size: 13px;
+    color: #c5c5c5;
+    margin-bottom: 0;
+}
+
+/* Responsive design */
+
+@media (max-width: 992px) {
+    .player-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .player-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*XP PROGRESS BAR*/
+
+.xp-progress-section {
+    background-color: #263849;
+    border: 1px solid #75c9f0;
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 25px;
+    text-align: left;
+}
+
+.xp-progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.xp-progress-header h3 {
+    font-size: 20px;
+    color: #87CEFA;
+    margin: 0;
+}
+
+.xp-progress-header span {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Visa progreso juosta */
+.xp-progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #343434;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #75c9f0;
+}
+
+/* Užpildyta progreso dalis */
+.xp-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #368fbd, #87CEFA);
+    border-radius: 20px;
+    box-shadow: 0 0 12px rgba(117, 201, 240, 0.6);
+    transition: width 0.5s ease;
+}
+
+/* Progreso informacija apačioje */
+.xp-progress-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: #c5c5c5;
+    font-size: 14px;
+}
+
+/* Pritaikymas telefonams */
+@media (max-width: 600px) {
+    .xp-progress-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .xp-progress-footer {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/*SKILLS PROGRESS STATISTICS*/
+
+.skills-statistics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.skills-stat-card {
+    background-color: #1a1a1a;
+    border: 1px solid #75c9f0;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(117, 201, 240, 0.12);
+    transition: all 0.3s ease;
+}
+
+.skills-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(117, 201, 240, 0.25);
+}
+
+.skills-stat-icon {
+    font-size: 35px;
+    color: #87CEFA;
+    margin-bottom: 15px;
+}
+
+.skills-stat-card h3 {
+    font-size: 19px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.skills-stat-value {
+    font-size: 32px;
+    font-weight: 800;
+    color: #87CEFA;
+    margin-bottom: 10px;
+}
+
+.skills-stat-card p {
+    font-size: 13px;
+    color: #c5c5c5;
+    margin-bottom: 0;
+}
+
+/* Responsive design */
+
+@media (max-width: 992px) {
+    .skills-statistics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-statistics {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*ANIMATED GRADIENT*/
+
+.services.animated-gradient {
+    background: linear-gradient(
+        -45deg,
+        #111827,
+        #123b63,
+        #176b87,
+        #263849,
+        #4b2875
+    );
+
+    background-size: 400% 400%;
+
+    animation: gradientAnimation 12s ease infinite;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gradientinio fono animacija */
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    25% {
+        background-position: 50% 100%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    75% {
+        background-position: 50% 0%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Paslaugų sekcijos turinys */
+
+.services.animated-gradient .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Antraščių spalvos */
+
+.services.animated-gradient h3,
+.services.animated-gradient .section-title {
+    color: #ffffff;
+}
+
+/* Lentelės antraštė */
+
+.services.animated-gradient table thead th {
+    background-color: rgba(17, 24, 39, 0.9);
+    color: #87CEFA;
+}
+
+/* Lentelės langeliai */
+
+.services.animated-gradient table tbody td {
+    background-color: rgba(17, 24, 39, 0.75);
+    color: #ffffff;
+}
+
+/* Sąrašų tekstas */
+
+.services.animated-gradient ul li,
+.services.animated-gradient ol li {
+    color: #eeeeee;
+}
+
+/* Vaizdo įrašų ir kitų medijų blokai */
+
+.services.animated-gradient video,
+.services.animated-gradient iframe {
+    border-radius: 12px;
+}
+
+/* Animacijos išjungimas, jei vartotojas
+   pageidauja mažiau judesio */
+
+@media (prefers-reduced-motion: reduce) {
+    .services.animated-gradient {
+        animation: none;
+        background-position: 50% 50%;
+    }
+}
+
+/*SHAPES*/
+
+/* Figūrų konteineris */
+
+.profile-shape-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-shapes {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    margin: 30px auto;
+}
+
+/* Profilio nuotrauka */
+
+.profile-image {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* 1 FIGŪRA - APSKRITIMAS */
+
+.animated-circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #87CEFA, #176b87);
+    border-radius: 50%;
+
+    top: -35px;
+    left: -35px;
+
+    z-index: 1;
+
+    animation: circleAnimation 5s ease-in-out infinite;
+}
+
+/* 2 FIGŪRA - TRIKAMPIS */
+
+.animated-triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    border-bottom: 85px solid #4b2875;
+
+    bottom: -25px;
+    right: -30px;
+
+    z-index: 3;
+
+    animation: triangleAnimation 4s ease-in-out infinite;
+}
+
+/* APSKRITIMO ANIMACIJA */
+
+@keyframes circleAnimation {
+
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.3);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+
+}
+
+/* TRIKAMPIO ANIMACIJA */
+
+@keyframes triangleAnimation {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(180deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+
+}
+
+/* Pritaikymas telefonams */
+
+@media (max-width: 600px) {
+
+    .profile-shapes {
+        max-width: 280px;
+    }
+
+    .animated-circle {
+        width: 70px;
+        height: 70px;
+        left: -15px;
+        top: -20px;
+    }
+
+    .animated-triangle {
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 60px solid #4b2875;
+        right: -15px;
+    }
+
+}
+
+/* Animacijos sumažinimas pagal vartotojo nustatymus */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .animated-circle,
+    .animated-triangle {
+        animation: none;
+    }
+
 }
