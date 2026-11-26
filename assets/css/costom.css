@@ -958,3 +958,154 @@ section {
     }
 
 }
+
+/* ==============================
+   KONTAKTŲ FORMA
+============================== */
+
+.contact .php-email-form {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border: 1px solid #75c9f0;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(117, 201, 240, 0.12);
+}
+
+/* Laukų pavadinimai */
+
+.contact .php-email-form .form-label {
+    display: block;
+    color: #87CEFA;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+/* Tekstiniai laukai */
+
+.contact .php-email-form .form-control {
+    background-color: #263849;
+    color: #ffffff;
+    border: 1px solid #75c9f0;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 15px;
+}
+
+/* Vietos rezervavimo tekstas */
+
+.contact .php-email-form .form-control::placeholder {
+    color: #b5c5d0;
+}
+
+/* Lauko aktyvavimo efektas */
+
+.contact .php-email-form .form-control:focus {
+    background-color: #263849;
+    color: #ffffff;
+    border-color: #87CEFA;
+    box-shadow: 0 0 8px rgba(135, 206, 250, 0.3);
+}
+
+/* Vertinimo klausimai */
+
+.contact .php-email-form .rating-group {
+    padding: 10px 0;
+}
+
+.contact .php-email-form .form-range {
+    accent-color: #87CEFA;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+/* Vertinimo skaičiai */
+
+.contact .php-email-form .rating-value {
+    color: #87CEFA;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+/* Siuntimo mygtukas */
+
+.contact .php-email-form button[type="submit"] {
+    background-color: #87CEFA;
+    color: #000000;
+    border: 2px solid #87CEFA;
+    border-radius: 30px;
+    padding: 12px 35px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Mygtuko užvedimas */
+
+.contact .php-email-form button[type="submit"]:hover {
+    background-color: transparent;
+    color: #87CEFA;
+    border-color: #87CEFA;
+    transform: translateY(-3px);
+}
+
+/* Tarpai tarp formos laukų */
+
+.contact .php-email-form .row {
+    row-gap: 20px;
+}
+
+/* Prisitaikymas telefonams */
+
+@media (max-width: 576px) {
+    .contact .php-email-form {
+        padding: 20px 15px;
+    }
+
+    .contact .php-email-form .form-control {
+        padding: 10px;
+    }
+}
+
+/* FORMOS REZULTATŲ BLOKAS */
+
+.formos-rezultatas {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #1a1a1a;
+    border: 1px solid #75c9f0;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(117, 201, 240, 0.15);
+}
+
+.formos-rezultatas h3 {
+    color: #87CEFA;
+    margin-bottom: 20px;
+}
+
+.formos-rezultatas p {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.formos-rezultatas strong {
+    color: #87CEFA;
+}
+/* Neaktyvus Siųsti mygtukas */
+
+.contact .php-email-form button[type="submit"]:disabled {
+    background-color: #555;
+    color: #999;
+    border-color: #555;
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+}
+
+/* Aktyvus Siųsti mygtukas */
+
+.contact .php-email-form button[type="submit"]:not(:disabled) {
+    background-color: #87CEFA;
+    color: #000;
+    cursor: pointer;
+    opacity: 1;
+}
