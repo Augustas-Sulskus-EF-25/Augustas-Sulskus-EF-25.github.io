@@ -142,34 +142,93 @@
         </div>
 
         <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
-          <div class="row gy-4">
+           
+         <div class="row gy-4">
 
+            <!-- Vardas -->
             <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <label for="vardas" class="form-label">Vardas</label>
+                  <input type="text" id="vardas" name="vardas"
+                        class="form-control" placeholder="Įveskite vardą" required>
             </div>
 
-            <div class="col-md-6 ">
-              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+            <!-- Pavardė -->
+            <div class="col-md-6">
+                  <label for="pavarde" class="form-label">Pavardė</label>
+                  <input type="text" id="pavarde" name="pavarde"
+                        class="form-control" placeholder="Įveskite pavardę" required>
             </div>
 
+            <!-- El. paštas -->
+            <div class="col-md-6">
+                  <label for="email" class="form-label">El. paštas</label>
+                  <input type="email" id="email" name="email"
+                        class="form-control" placeholder="Įveskite el. paštą" required>
+            </div>
+
+            <!-- Telefono numeris -->
+            <div class="col-md-6">
+                  <label for="telefonas" class="form-label">Telefono numeris</label>
+                  <input type="tel" id="telefonas" name="telefonas"
+                        class="form-control" placeholder="+370..." required>
+            </div>
+
+            <!-- Adresas -->
             <div class="col-md-12">
-              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  <label for="adresas" class="form-label">Adresas</label>
+                  <input type="text" id="adresas" name="adresas"
+                        class="form-control" placeholder="Įveskite adresą" required>
             </div>
 
+            <!-- Vertinimo klausimas 1 -->
             <div class="col-md-12">
-              <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  <label for="vertinimas1" class="form-label">
+                        1. Kaip vertinate svetainės dizainą?
+                        <span id="reiksme1">5</span>/10
+                  </label>
+                  <input type="range" id="vertinimas1" name="vertinimas1"
+                        class="form-range" min="1" max="10" value="5"
+                        oninput="document.getElementById('reiksme1').textContent = this.value">
             </div>
 
+            <!-- Vertinimo klausimas 2 -->
+            <div class="col-md-12">
+                  <label for="vertinimas2" class="form-label">
+                        2. Kaip vertinate svetainės patogumą?
+                        <span id="reiksme2">5</span>/10
+                  </label>
+                  <input type="range" id="vertinimas2" name="vertinimas2"
+                        class="form-range" min="1" max="10" value="5"
+                        oninput="document.getElementById('reiksme2').textContent = this.value">
+            </div>
+
+            <!-- Vertinimo klausimas 3 -->
+            <div class="col-md-12">
+                  <label for="vertinimas3" class="form-label">
+                        3. Kaip vertinate pateiktą informaciją?
+                        <span id="reiksme3">5</span>/10
+                  </label>
+                  <input type="range" id="vertinimas3" name="vertinimas3"
+                        class="form-range" min="1" max="10" value="5"
+                        oninput="document.getElementById('reiksme3').textContent = this.value">
+            </div>
+
+            <!-- Siuntimo mygtukas -->
             <div class="col-md-12 text-center">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <div class="loading">Siunčiama...</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">
+                        Jūsų atsakymas išsiųstas. Ačiū!
+                  </div>
 
-              <button type="submit">Send Message</button>
+                  <button type="submit" id="siusti" disabled>Siųsti</button>
             </div>
 
-          </div>
+         </div>
+
         </form><!-- End Contact Form -->
+        <!-- Formos duomenų rezultatai -->
+        <div id="formos-rezultatas" class="formos-rezultatas"></div>
 
       </div>
 
@@ -223,6 +282,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/costom.js"></script>
 
 </body>
 
